@@ -1,4 +1,3 @@
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import styled from "styled-components/native";
 
 export const Container = styled.View`
@@ -6,12 +5,12 @@ export const Container = styled.View`
   background-color: #f7f7f7;
 
   align-items: center;
+  justify-content: center;
   flex-direction: row;
 `;
 
-
-export const Teste = styled.View`
-  margin: 0 auto;
+export const KeyboardAvoidingView = styled.KeyboardAvoidingView`
+  align-items: center;
 `;
 
 export const Logo = styled.View`

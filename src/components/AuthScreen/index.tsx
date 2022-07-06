@@ -1,4 +1,4 @@
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { KeyboardAvoidingView, ScrollView } from "react-native";
 import { Form } from "../Form";
 import * as S from "./styles";
 
@@ -9,8 +9,8 @@ type Props = {
 export const AuthScreen = ({ children }: Props) => {
   return (
     <S.Container>
-      <KeyboardAwareScrollView>
-        <S.Teste>
+      <ScrollView>
+        <S.KeyboardAvoidingView behavior="padding">
           <S.Logo>
             <S.Title>The Greatest App</S.Title>
             <S.GreenWrapper>
@@ -20,8 +20,8 @@ export const AuthScreen = ({ children }: Props) => {
           </S.Logo>
 
           <Form>{children}</Form>
-        </S.Teste>
-      </KeyboardAwareScrollView>
+        </S.KeyboardAvoidingView>
+      </ScrollView>
     </S.Container>
   );
 };
